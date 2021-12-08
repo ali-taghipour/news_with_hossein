@@ -1,0 +1,2050 @@
+{
+	"info": {
+		"_postman_id": "61fed637-cd8e-42e0-96f1-7635988e9477",
+		"name": "shid-wallet",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "packet",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "{{$guid}}",
+									"type": "text"
+								},
+								{
+									"key": "service_id",
+									"value": "bd5a8fa3-0e3f-46ac-9b26-c501affcf682",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "aaaaa",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{HOST}}/packet/new",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"packet",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "filter",
+									"value": "{\"name\":\"a\"}",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "sort_by",
+									"value": "id",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "sort_type",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "per_page",
+									"value": "10",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{HOST}}/packet/",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"packet",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get one",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/packet/:id",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"packet",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "ad6dd68e-4c78-42fd-af2e-58d0784a6068"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "aaaaaa",
+									"type": "text"
+								},
+								{
+									"key": "min_deposit",
+									"value": "1000",
+									"type": "text"
+								},
+								{
+									"key": "max_deposit",
+									"value": "5000",
+									"type": "text"
+								},
+								{
+									"key": "min_withdrawal",
+									"value": "5000",
+									"type": "text"
+								},
+								{
+									"key": "max_withdrawal",
+									"value": "12000",
+									"type": "text"
+								},
+								{
+									"key": "max_capacity",
+									"value": "500000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{HOST}}/packet/:id",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"packet",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "450839ad-78b0-41d5-a792-6f24a6a6251b"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "wallet",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "{{$guid}}",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "{{$guid}}",
+									"type": "text"
+								},
+								{
+									"key": "user_type",
+									"value": "user",
+									"description": "//user,admin",
+									"type": "text"
+								},
+								{
+									"key": "service_id",
+									"value": "bd5a8fa3-0e3f-46ac-9b26-c501affcf682",
+									"type": "text"
+								},
+								{
+									"key": "role_id",
+									"value": "{{$guid}}",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "mywallet",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{HOST}}/wallet/new",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"wallet",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "filter",
+									"value": "{\"name\":\"a\"}",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "sort_by",
+									"value": "id",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "sort_type",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "per_page",
+									"value": "10",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{HOST}}/wallet/",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"wallet",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get one",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/wallet/:id",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"wallet",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "90f6fae6-58ee-4f99-9e1e-1f539653feec"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "aaaaaa",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{HOST}}/wallet/:id",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"wallet",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "8048a29d-0df2-456f-a649-beef1f1ed191"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "charge without Gateway",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "amount",
+									"value": "100000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{HOST}}/wallet/:id/charge",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"wallet",
+								":id",
+								"charge"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "90f6fae6-58ee-4f99-9e1e-1f539653feec"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "payment",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "wallet_id",
+									"value": "90f6fae6-58ee-4f99-9e1e-1f539653feec",
+									"type": "text"
+								},
+								{
+									"key": "amount",
+									"value": "5000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{HOST}}/payment/new",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"payment",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "filter",
+									"value": "{\"name\":\"a\"}",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "sort_by",
+									"value": "id",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "sort_type",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "per_page",
+									"value": "10",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{HOST}}/payment/",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"payment",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get one",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/payment/:id",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"payment",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "status-types",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/payment/status-types",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"payment",
+								"status-types"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "part",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "service_id",
+									"value": "bd5a8fa3-0e3f-46ac-9b26-c501affcf682",
+									"type": "text"
+								},
+								{
+									"key": "wallet_id",
+									"value": "90f6fae6-58ee-4f99-9e1e-1f539653feec",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "part1",
+									"type": "text"
+								},
+								{
+									"key": "amount",
+									"value": "80000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{HOST}}/part/new",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"part",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "filter",
+									"value": "{\"name\":\"a\"}",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "sort_by",
+									"value": "id",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "sort_type",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "per_page",
+									"value": "10",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{HOST}}/part/",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"part",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get one",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/part/:id",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"part",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "8048a29d-0df2-456f-a649-beef1f1ed191"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "aaaaaa",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{HOST}}/part/:id",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"part",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "6279a553-ba03-4e39-ab9e-186e1dd744ae"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "spend from part by service",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\": 5000,\r\n    \"service_id\": \"bd5a8fa3-0e3f-46ac-9b26-c501affcf682\",\r\n    \"sections\": [\r\n        {\r\n            \"wallet_id\": \"bc2bebf9-5620-48d3-a4c7-1f8249561629\",\r\n            \"percent\": 30\r\n        }\r\n    ],\r\n    \"description\": \"ssss\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/part/:id/spend",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"part",
+								":id",
+								"spend"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "6279a553-ba03-4e39-ab9e-186e1dd744ae"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "remove part",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/part/:partId",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"part",
+								":partId"
+							],
+							"variable": [
+								{
+									"key": "partId",
+									"value": "6279a553-ba03-4e39-ab9e-186e1dd744ae"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "withdrawal",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "wallet_id",
+									"value": "90f6fae6-58ee-4f99-9e1e-1f539653feec",
+									"description": "only required for superadmin",
+									"type": "text"
+								},
+								{
+									"key": "service_id",
+									"value": "bd5a8fa3-0e3f-46ac-9b26-c501affcf682",
+									"description": "only required for superadmin",
+									"type": "text"
+								},
+								{
+									"key": "amount",
+									"value": "10000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{HOST}}/withdrawal/new",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"withdrawal",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "filter",
+									"value": "{\"name\":\"a\"}",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "sort_by",
+									"value": "id",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "sort_type",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "per_page",
+									"value": "10",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{HOST}}/withdrawal/",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"withdrawal",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get one",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/withdrawal/:id",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"withdrawal",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "488bc29d-2f13-4eac-bdd5-13fc24c9b682"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "tracking_code",
+									"value": "125648-451",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "description for withdrawal",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{HOST}}/withdrawal/:id",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"withdrawal",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "488bc29d-2f13-4eac-bdd5-13fc24c9b682"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "accept withdrawal request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "tracking_code",
+									"value": "125648-451",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "description for withdrawal",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{HOST}}/withdrawal/:id/accept",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"withdrawal",
+								":id",
+								"accept"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "8b136c73-71ca-4ffa-84b1-11f15452d0a9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reject withdrawal request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "tracking_code",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "this is rejection",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{HOST}}/withdrawal/:id/reject",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"withdrawal",
+								":id",
+								"reject"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "7ca29047-ed09-4572-894c-4291cbea4c0a"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "locked",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "wallet_id",
+									"value": "90f6fae6-58ee-4f99-9e1e-1f539653feec",
+									"type": "text"
+								},
+								{
+									"key": "amount",
+									"value": "800000",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "tozihat",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{HOST}}/locked/new",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"locked",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "filter",
+									"value": "{\"name\":\"a\"}",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "sort_by",
+									"value": "id",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "sort_type",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "per_page",
+									"value": "10",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{HOST}}/locked/",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"locked",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get one",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/locked/:id",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"locked",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "c7d46afe-6289-4454-b416-3e72e74eb13d"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "description",
+									"value": "aaaaaa",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{HOST}}/locked/:id",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"locked",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "c7d46afe-6289-4454-b416-3e72e74eb13d"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "unlock",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\": 5000,\r\n    \"service_id\": \"bd5a8fa3-0e3f-46ac-9b26-c501affcf682\",\r\n    \"sections\": [\r\n        {\r\n            \"wallet_id\": \"bc2bebf9-5620-48d3-a4c7-1f8249561629\",\r\n            \"percent\": 30\r\n        }\r\n    ],\r\n    \"description\": \"ssss\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/locked/:id/unlocked",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"locked",
+								":id",
+								"unlocked"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "c7d46afe-6289-4454-b416-3e72e74eb13d"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deduct-money-from-locked-wallet",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\": 5000,\r\n    \"service_id\": \"bd5a8fa3-0e3f-46ac-9b26-c501affcf682\",\r\n    \"sections\": [\r\n        {\r\n            \"wallet_id\": \"bc2bebf9-5620-48d3-a4c7-1f8249561629\",\r\n            \"percent\": 30\r\n        }\r\n    ],\r\n    \"description\": \"ssss\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/locked/:id/deduct-money",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"locked",
+								":id",
+								"deduct-money"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "c7d46afe-6289-4454-b416-3e72e74eb13d"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "creditCard",
+			"item": [
+				{
+					"name": "create creaditcard",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"service_id\":\"bd5a8fa3-0e3f-46ac-9b26-c501affcf682\",\r\n    \"amount\": 500,\r\n    \"wallet_ids\": [\r\n        \"bc2bebf9-5620-48d3-a4c7-1f8249561629\",\r\n        \"90f6fae6-58ee-4f99-9e1e-1f539653feec\"\r\n    ],\r\n    \"expire_at\": \"2021-09-14T01:15:00.000Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/creditcard/new",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"creditcard",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create giftcard",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"service_id\":\"bd5a8fa3-0e3f-46ac-9b26-c501affcf682\",\r\n    \"amount\":500,\r\n    \"expire_at\":\"2021-09-14T01:15:00.000Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/creditcard/giftcard/new",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"creditcard",
+								"giftcard",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "spend from creditcard",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\": 100,\r\n    \"password\": \"733\",\r\n    \"service_id\": \"bd5a8fa3-0e3f-46ac-9b26-c501affcf682\",\r\n    \"wallet_id\": \"90f6fae6-58ee-4f99-9e1e-1f539653feec\",\r\n    \"sections\": [\r\n        {\r\n            \"wallet_id\": \"90f6fae6-58ee-4f99-9e1e-1f539653feec\",\r\n            \"percent\": 5\r\n        }\r\n    ],\r\n    \"expire_at\": \"2021-09-11T07:06:05.307Z\",\r\n    \"description\": \"ssss\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/creditcard/:id/spend",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"creditcard",
+								":id",
+								"spend"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "93801d00-2b3c-44e4-aca3-25aae2a39a5b",
+									"description": "//creditcard_id"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "spend from gitcard",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\": 100,\r\n    \"password\": \"733\",\r\n    \"service_id\": \"bd5a8fa3-0e3f-46ac-9b26-c501affcf682\",\r\n    \"wallet_id\": \"90f6fae6-58ee-4f99-9e1e-1f539653feec\",\r\n    \"sections\": [\r\n        {\r\n            \"wallet_id\": \"90f6fae6-58ee-4f99-9e1e-1f539653feec\",\r\n            \"percent\": 5\r\n        }\r\n    ],\r\n    \"expire_at\": \"2021-09-11T07:06:05.307Z\",\r\n    \"description\": \"ssss\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/creditcard/giftcard/:id/spend",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"creditcard",
+								"giftcard",
+								":id",
+								"spend"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "0fa6259a-43a1-4b4f-8e34-442358107bf7",
+									"description": "//creditcard_id"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "filter",
+									"value": "{\"name\":\"a\"}",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "sort_by",
+									"value": "id",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "sort_type",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "per_page",
+									"value": "10",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{HOST}}/creditcard/",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"creditcard",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get one",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/creditcard/:id",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"creditcard",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "93801d00-2b3c-44e4-aca3-25aae2a39a5b"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "transaction",
+			"item": [
+				{
+					"name": "status-types",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/transaction/status-types",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"transaction",
+								"status-types"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "filter",
+									"value": "{\"name\":\"a\"}",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "sort_by",
+									"value": "id",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "sort_type",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "per_page",
+									"value": "10",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "from_date",
+									"value": "{{$randomDatePast}}",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "to_date",
+									"value": "{{$randomDateFuture}}",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{HOST}}/transaction/",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"transaction",
+								""
+							]
+						},
+						"description": "all transaction\r\n(user/admin/superadmin)"
+					},
+					"response": []
+				},
+				{
+					"name": "get all - need-action",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "filter",
+									"value": "{\"name\":\"a\"}",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "sort_by",
+									"value": "id",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "sort_type",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "per_page",
+									"value": "10",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "from_date",
+									"value": "{{$randomDatePast}}",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "to_date",
+									"value": "{{$randomDateFuture}}",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{HOST}}/transaction/need-action",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"transaction",
+								"need-action"
+							]
+						},
+						"description": "transactions which need confirmation by admin\r\n(admin/superadmin)"
+					},
+					"response": []
+				},
+				{
+					"name": "get all - holds",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "filter",
+									"value": "{\"name\":\"a\"}",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "sort_by",
+									"value": "id",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "sort_type",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "per_page",
+									"value": "10",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "from_date",
+									"value": "{{$randomDatePast}}",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "to_date",
+									"value": "{{$randomDateFuture}}",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{HOST}}/transaction/holds",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"transaction",
+								"holds"
+							]
+						},
+						"description": "transactions in hold status\r\n(admin/superadmin)"
+					},
+					"response": []
+				},
+				{
+					"name": "get all - accepted",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "filter",
+									"value": "{\"name\":\"a\"}",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "sort_by",
+									"value": "id",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "sort_type",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "per_page",
+									"value": "10",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "from_date",
+									"value": "{{$randomDatePast}}",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "to_date",
+									"value": "{{$randomDateFuture}}",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{HOST}}/transaction/accepted",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"transaction",
+								"accepted"
+							]
+						},
+						"description": "transactions in accepted status and all commisions was paid\r\n(admin/superadmin)"
+					},
+					"response": []
+				},
+				{
+					"name": "get all - rejected",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "filter",
+									"value": "{\"name\":\"a\"}",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "sort_by",
+									"value": "id",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "sort_type",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "per_page",
+									"value": "10",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "from_date",
+									"value": "{{$randomDatePast}}",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "to_date",
+									"value": "{{$randomDateFuture}}",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{HOST}}/transaction/rejected",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"transaction",
+								"rejected"
+							]
+						},
+						"description": "transactions in rejected status and all money returned\r\n(admin/superadmin)"
+					},
+					"response": []
+				},
+				{
+					"name": "get all - unpaied-taxes",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "filter",
+									"value": "{\"name\":\"a\"}",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "sort_by",
+									"value": "id",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "sort_type",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "per_page",
+									"value": "10",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "from_date",
+									"value": "{{$randomDatePast}}",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "to_date",
+									"value": "{{$randomDateFuture}}",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{HOST}}/transaction/unpaied-taxes",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"transaction",
+								"unpaied-taxes"
+							]
+						},
+						"description": "just admin wallet transactions(from packet to admin wallet)\r\n(admin/superadmin)"
+					},
+					"response": []
+				},
+				{
+					"name": "get one",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/transaction/:id",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"transaction",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "ad71a662-13bc-4137-8512-aa983d6177b9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "set-hold",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{HOST}}/transaction/:id/hold",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"transaction",
+								":id",
+								"hold"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "e7e93c7d-e031-492e-a21a-f4fffee03f3c"
+								}
+							]
+						},
+						"description": "admin/superadmin"
+					},
+					"response": []
+				},
+				{
+					"name": "set-accept",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"commission_status\":{ \r\n        \"{{$guid}}\": true\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/transaction/:id/accept",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"transaction",
+								":id",
+								"accept"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "ab0898aa-e066-422d-88ba-23c3cc7bf6a3"
+								}
+							]
+						},
+						"description": "admin/superadmin"
+					},
+					"response": []
+				},
+				{
+					"name": "set-reject",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{HOST}}/transaction/:id/reject",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"transaction",
+								":id",
+								"reject"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "e5582733-c2ce-43b2-b068-4fae344adb2a"
+								}
+							]
+						},
+						"description": "admin/superadmin"
+					},
+					"response": []
+				},
+				{
+					"name": "set-tax",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "wallet_id",
+									"value": "bc2bebf9-5620-48d3-a4c7-1f8249561629",
+									"type": "text"
+								},
+								{
+									"key": "amount",
+									"value": "10",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{HOST}}/transaction/:id/tax",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"transaction",
+								":id",
+								"tax"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "ad71a662-13bc-4137-8512-aa983d6177b9"
+								}
+							]
+						},
+						"description": "admin/superadmin"
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{TOKEN}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"var Header = require('postman-collection').Header",
+					"pm.request.headers.add({key: 'auth_basic', value: 'Basic c2hpZDoxMjM0NTY3OA==' })//{shid:'12345678'}"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "HOST",
+			"value": "https://wallet.iran.liara.run"
+		},
+		{
+			"key": "TOKEN",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFjNzcwNGY2LWE3NjktNGZkOC1iYTExLTg4NjZjMWQ0NzkzNiIsInJvbGUiOiJzdXBlcl9hZG1pbiIsImlhdCI6MTYzMTM0Mzc0MiwiZXhwIjoxNjMxMzUwOTQyfQ.awgvSWQDHYl1UaYuKk5ZbwAcEvsYg_VM06h3Ljppves"
+		},
+		{
+			"key": "TOKEN",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFjNzcwNGY2LWE3NjktNGZkOC1iYTExLTg4NjZjMWQ0NzkzNiIsInJvbGUiOiJzdXBlcl9hZG1pbiIsImlhdCI6MTYzMTA5NTI4NSwiZXhwIjoxNjMxMTAyNDg1fQ.aFu-9BJpauJuIoPnQK1cAq95CKKKHpI4q-plANrhG1U",
+			"disabled": true
+		},
+		{
+			"key": "HOST",
+			"value": "127.0.0.1:3000",
+			"disabled": true
+		}
+	]
+}

@@ -1,0 +1,5964 @@
+{
+	"info": {
+		"_postman_id": "9cb9c331-4fd6-4069-9619-6dea0fca8525",
+		"name": "shid-auth",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "super-admin",
+			"item": [
+				{
+					"name": "servise",
+					"item": [
+						{
+							"name": "get all service",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "filter",
+											"value": "{\"name\":\"a\"}",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "sort_by",
+											"value": "id",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "sort_type",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "per_page",
+											"value": "10",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{HOST}}/super-admin/service/",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"super-admin",
+										"service",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create service",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "Club15",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{HOST}}/super-admin/service/new",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"super-admin",
+										"service",
+										"new"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get one service",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{HOST}}/super-admin/service/:serviceId",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"super-admin",
+										"service",
+										":serviceId"
+									],
+									"variable": [
+										{
+											"key": "serviceId",
+											"value": "3890a8bc-adc6-4af0-97a9-bc934686433c"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update service",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "transportation2",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{HOST}}/super-admin/service/:serviceId",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"super-admin",
+										"service",
+										":serviceId"
+									],
+									"variable": [
+										{
+											"key": "serviceId",
+											"value": "3890a8bc-adc6-4af0-97a9-bc934686433c"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "{{TOKEN}}",
+								"type": "string"
+							}
+						]
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "admins managment",
+					"item": [
+						{
+							"name": "get all",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "filter",
+											"value": "{\"id\":\"a\"}",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "sort_by",
+											"value": "id",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "sort_type",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "per_page",
+											"value": "10",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{HOST}}/super-admin/admins/",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"super-admin",
+										"admins",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "alex",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "alex25",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "alex256@example.co",
+											"type": "text"
+										},
+										{
+											"key": "phone_number",
+											"value": "09121234580",
+											"type": "text"
+										},
+										{
+											"key": "service_id",
+											"value": "4c679ac2-ade4-4b95-8f81-8089a7bc232c",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{HOST}}/super-admin/admins/new",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"super-admin",
+										"admins",
+										"new"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get one",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{HOST}}/super-admin/admins/:adminId",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"super-admin",
+										"admins",
+										":adminId"
+									],
+									"variable": [
+										{
+											"key": "adminId",
+											"value": "e3ca866f-89dc-4ba8-8127-0199095378dc"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "alex",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "alex2",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "email",
+											"value": "alex@example.com",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "phone_number",
+											"value": "09121234567",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "service_id",
+											"value": "708ace75-92f3-4b9c-8df4-50d6e280fac7",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{HOST}}/super-admin/admins/:adminId",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"super-admin",
+										"admins",
+										":adminId"
+									],
+									"variable": [
+										{
+											"key": "adminId",
+											"value": "e3ca866f-89dc-4ba8-8127-0199095378dc"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "{{TOKEN}}",
+								"type": "string"
+							}
+						]
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "users managment",
+					"item": [
+						{
+							"name": "get all",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "filter",
+											"value": "{\"id\":\"a\"}",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "sort_by",
+											"value": "id",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "sort_type",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "per_page",
+											"value": "10",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{HOST}}/super-admin/users/",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"super-admin",
+										"users",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get one",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{HOST}}/super-admin/users/:userId",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"super-admin",
+										"users",
+										":userId"
+									],
+									"variable": [
+										{
+											"key": "userId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "alex22",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "alex233",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "alex@example.com",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "phone_number",
+											"value": "09100342874",
+											"type": "text"
+										},
+										{
+											"key": "service_id",
+											"value": "708ace75-92f3-4b9c-8df4-50d6e280fac7",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{HOST}}/super-admin/users/:userId",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"super-admin",
+										"users",
+										":userId"
+									],
+									"variable": [
+										{
+											"key": "userId",
+											"value": "39e8ad6a-01bc-446b-a963-376c5e30f6cb"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get user By WalletId",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{HOST}}/super-admin/users/user-by-wallet/:walletId",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"super-admin",
+										"users",
+										"user-by-wallet",
+										":walletId"
+									],
+									"variable": [
+										{
+											"key": "walletId",
+											"value": "3f2dbaa9-4772-44cc-b198-23c2a018503c"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "{{TOKEN}}",
+								"type": "string"
+							}
+						]
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "role",
+					"item": [
+						{
+							"name": "get all role",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "filter",
+											"value": "{\"name\":\"a\"}",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "sort_by",
+											"value": "id",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "sort_type",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "per_page",
+											"value": "10",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{HOST}}/super-admin/role/",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"super-admin",
+										"role",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create role",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"manager3\",\r\n    \"service_id\": \"a85ff7eb-6700-4428-8c9b-adb9f1a936c3\",\r\n    \"is_permission\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{HOST}}/super-admin/role/new",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"super-admin",
+										"role",
+										"new"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get one role",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{HOST}}/super-admin/role/:roleId",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"super-admin",
+										"role",
+										":roleId"
+									],
+									"variable": [
+										{
+											"key": "roleId",
+											"value": "a73ec674-acb8-4c82-84b5-1028c8988cbc"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update role",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "driver",
+											"type": "text"
+										},
+										{
+											"key": "is_permission",
+											"value": "true",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{HOST}}/super-admin/role/:roleId",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"super-admin",
+										"role",
+										":roleId"
+									],
+									"variable": [
+										{
+											"key": "roleId",
+											"value": "7c6fdfad-eaae-4ae0-a5fc-20cbf79068e4"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "set role to user",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "user_id",
+											"value": "fe541a91-2daa-4920-8e49-071a08c300db",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{HOST}}/super-admin/role/:roleId/set-role-to-user",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"super-admin",
+										"role",
+										":roleId",
+										"set-role-to-user"
+									],
+									"variable": [
+										{
+											"key": "roleId",
+											"value": "1876ad5c-5959-4711-9ff1-db0ccc438c7e"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "remove-role-from-user",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "user_id",
+											"value": "fe541a91-2daa-4920-8e49-071a08c300db",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{HOST}}/super-admin/role/:roleId/remove-role-from-user",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"super-admin",
+										"role",
+										":roleId",
+										"remove-role-from-user"
+									],
+									"variable": [
+										{
+											"key": "roleId",
+											"value": "1876ad5c-5959-4711-9ff1-db0ccc438c7e"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "{{TOKEN}}",
+								"type": "string"
+							}
+						]
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "address",
+					"item": [
+						{
+							"name": "get my addresses",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{HOST}}/super-admin/address/my",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"super-admin",
+										"address",
+										"my"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "set my addresses",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "dddd355",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "stat",
+											"value": "dddd55555",
+											"type": "text"
+										},
+										{
+											"key": "city",
+											"value": "dddd",
+											"type": "text"
+										},
+										{
+											"key": "neighborhood,",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "street",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "alley",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "house_number",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "others",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{HOST}}/super-admin/address/my",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"super-admin",
+										"address",
+										"my"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get all",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "filter",
+											"value": "{\"name\":\"a\"}",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "sort_by",
+											"value": "id",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "sort_type",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "per_page",
+											"value": "10",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{HOST}}/super-admin/address/",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"super-admin",
+										"address",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get one",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{HOST}}/super-admin/address/:addressId",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"super-admin",
+										"address",
+										":addressId"
+									],
+									"variable": [
+										{
+											"key": "addressId",
+											"value": "30"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "dddd355",
+											"type": "text"
+										},
+										{
+											"key": "stat",
+											"value": "dddd55555",
+											"type": "text"
+										},
+										{
+											"key": "city",
+											"value": "dddd",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "neighborhood,",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "street",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "alley",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "house_number",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "others",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{HOST}}/super-admin/address/:addressId",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"super-admin",
+										"address",
+										":addressId"
+									],
+									"variable": [
+										{
+											"key": "addressId",
+											"value": "30"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "{{TOKEN}}",
+								"type": "string"
+							}
+						]
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "company Info",
+					"item": [
+						{
+							"name": "get my companies",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{HOST}}/super-admin/company/my",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"super-admin",
+										"company",
+										"my"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "set my companies",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "economic_code",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "national_code",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "registeration_id",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "telephone_number",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "field_of_activity",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{HOST}}/super-admin/company/my",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"super-admin",
+										"company",
+										"my"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get all",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "filter",
+											"value": "{\"name\":\"a\"}",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "sort_by",
+											"value": "id",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "sort_type",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "per_page",
+											"value": "10",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{HOST}}/super-admin/company/",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"super-admin",
+										"company",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get one",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{HOST}}/super-admin/company/:companyId",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"super-admin",
+										"company",
+										":companyId"
+									],
+									"variable": [
+										{
+											"key": "companyId",
+											"value": "30"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "dddd",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "economic_code",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "national_code",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "registeration_id",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "telephone_number",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "field_of_activity",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{HOST}}/super-admin/company/:companyId",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"super-admin",
+										"company",
+										":companyId"
+									],
+									"variable": [
+										{
+											"key": "companyId",
+											"value": "30"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "{{TOKEN}}",
+								"type": "string"
+							}
+						]
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "social Media",
+					"item": [
+						{
+							"name": "get my social Media",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{HOST}}/super-admin/social-media/my",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"super-admin",
+										"social-media",
+										"my"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "set my social Media",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "facebook",
+											"value": "4445",
+											"type": "text"
+										},
+										{
+											"key": "twitter",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "linkedIn",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "youtube",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "aparat",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "instagram",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "telegram",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "others",
+											"value": "{}",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{HOST}}/super-admin/social-Media/my",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"super-admin",
+										"social-Media",
+										"my"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get all",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "filter",
+											"value": "{\"name\":\"a\"}",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "sort_by",
+											"value": "id",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "sort_type",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "per_page",
+											"value": "10",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{HOST}}/super-admin/social-Media/",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"super-admin",
+										"social-Media",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get one",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{HOST}}/super-admin/social-Media/:socialMediaId",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"super-admin",
+										"social-Media",
+										":socialMediaId"
+									],
+									"variable": [
+										{
+											"key": "socialMediaId",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "facebook",
+											"value": "44456",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "twitter",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "linkedIn",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "youtube",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "aparat",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "instagram",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "telegram",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "others",
+											"value": "{}",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{HOST}}/super-admin/social-Media/:socialMediaId",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"super-admin",
+										"social-Media",
+										":socialMediaId"
+									],
+									"variable": [
+										{
+											"key": "socialMediaId",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "{{TOKEN}}",
+								"type": "string"
+							}
+						]
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "security Questions",
+					"item": [
+						{
+							"name": "get all",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "filter",
+											"value": "{\"name\":\"a\"}",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "sort_by",
+											"value": "id",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "sort_type",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "per_page",
+											"value": "10",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{HOST}}/super-admin/security-question",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"super-admin",
+										"security-question"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "question",
+											"value": "what is your favorite book?",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{HOST}}/super-admin/security-question",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"super-admin",
+										"security-question"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "question",
+											"value": "what is your favorite book?",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{HOST}}/super-admin/security-question/:securityQuestionId",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"super-admin",
+										"security-question",
+										":securityQuestionId"
+									],
+									"variable": [
+										{
+											"key": "securityQuestionId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "{{TOKEN}}",
+								"type": "string"
+							}
+						]
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "other info",
+					"item": [
+						{
+							"name": "get my info",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{HOST}}/super-admin/info/my",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"super-admin",
+										"info",
+										"my"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "set my info",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "phone_number",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "configurations",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "name",
+											"value": "gggg",
+											"type": "text"
+										},
+										{
+											"key": "family_name",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "birthday",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "national_id",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "gender",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "job",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "state",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "city",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "others",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{HOST}}/super-admin/info/my",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"super-admin",
+										"info",
+										"my"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get all",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "filter",
+											"value": "{\"name\":\"a\"}",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "sort_by",
+											"value": "id",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "sort_type",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "per_page",
+											"value": "10",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{HOST}}/super-admin/info/",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"super-admin",
+										"info",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get one",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{HOST}}/super-admin/info/:infoId",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"super-admin",
+										"info",
+										":infoId"
+									],
+									"variable": [
+										{
+											"key": "infoId",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "",
+											"description": "required",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "phone_number",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "configurations",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "name",
+											"value": "gggg",
+											"type": "text"
+										},
+										{
+											"key": "family_name",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "birthday",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "national_id",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "gender",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "job",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "state",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "city",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "others",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{HOST}}/super-admin/info/:infoId",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"super-admin",
+										"info",
+										":infoId"
+									],
+									"variable": [
+										{
+											"key": "infoId",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "{{TOKEN}}",
+								"type": "string"
+							}
+						]
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "login by user pass",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "super-admin",
+									"description": "shid-super-admin",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "root",
+									"description": "shid-pass-auth-1667",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{HOST}}/super-admin/login",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"super-admin",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login by phone",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "phone_number",
+									"value": "09339858861",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{HOST}}/super-admin/login/by-phone",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"super-admin",
+								"login",
+								"by-phone"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verify login by phone",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "phone_number",
+									"value": "09339858861",
+									"type": "text"
+								},
+								{
+									"key": "code",
+									"value": "265430",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{HOST}}/super-admin/login/by-phone/verify",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"super-admin",
+								"login",
+								"by-phone",
+								"verify"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update my credentials",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "user112",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "root20",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "user112@example.com",
+									"type": "text"
+								},
+								{
+									"key": "phone_number",
+									"value": "09339858861",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{HOST}}/super-admin/me/update",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"super-admin",
+								"me",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getting my information",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "phone_number",
+									"value": "09339858861",
+									"type": "text"
+								},
+								{
+									"key": "code",
+									"value": "906805",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{HOST}}/super-admin/me",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"super-admin",
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/super-admin/logout",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"super-admin",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{TOKEN}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var Header = require('postman-collection').Header",
+							"pm.request.headers.add({key: 'auth_basic', value: 'Basic c2hpZDoxMjM0NTY3OA==' })//{shid:'12345678'}"
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "role",
+					"item": [
+						{
+							"name": "get all role",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "filter",
+											"value": "{\"name\":\"a\"}",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "sort_by",
+											"value": "id",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "sort_type",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "per_page",
+											"value": "10",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{HOST}}/admin/role",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"admin",
+										"role"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create role",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "manager55",
+											"type": "text"
+										},
+										{
+											"key": "service_id",
+											"value": "149255e1-df0f-4878-a7b5-8b8ba9c53e7c",
+											"type": "text"
+										},
+										{
+											"key": "is_permission",
+											"value": "true",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{HOST}}/admin/role/new",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"admin",
+										"role",
+										"new"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get one role",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "transportation",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{HOST}}/admin/role/:roleId",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"admin",
+										"role",
+										":roleId"
+									],
+									"variable": [
+										{
+											"key": "roleId",
+											"value": "fd07e2fd-a276-4b06-b631-0e53b389497c"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update role",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "driver55",
+											"type": "text"
+										},
+										{
+											"key": "is_permission",
+											"value": "true",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{HOST}}/admin/role/:roleId",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"admin",
+										"role",
+										":roleId"
+									],
+									"variable": [
+										{
+											"key": "roleId",
+											"value": "fd07e2fd-a276-4b06-b631-0e53b389497c"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "set role to user",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "user_id",
+											"value": "df1de115-f2e4-450e-9056-b13657978f2a",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{HOST}}/admin/role/:roleId/set-role-to-user",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"admin",
+										"role",
+										":roleId",
+										"set-role-to-user"
+									],
+									"variable": [
+										{
+											"key": "roleId",
+											"value": "7c6fdfad-eaae-4ae0-a5fc-20cbf79068e4"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "remove-role-from-user",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "user_id",
+											"value": "fe541a91-2daa-4920-8e49-071a08c300db",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{HOST}}/admin/role/:roleId/remove-role-from-user",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"admin",
+										"role",
+										":roleId",
+										"remove-role-from-user"
+									],
+									"variable": [
+										{
+											"key": "roleId",
+											"value": "1876ad5c-5959-4711-9ff1-db0ccc438c7e"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "{{TOKEN}}",
+								"type": "string"
+							}
+						]
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "address",
+					"item": [
+						{
+							"name": "get my addresses",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{HOST}}/admin/address/my",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"admin",
+										"address",
+										"my"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "set my addresses",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "hiyui",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "stat",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "city",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "neighborhood,",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "street",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "alley",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "house_number",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "others",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{HOST}}/admin/address/my",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"admin",
+										"address",
+										"my"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get all",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "filter",
+											"value": "{\"name\":\"a\"}",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "sort_by",
+											"value": "id",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "sort_type",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "per_page",
+											"value": "10",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{HOST}}/admin/address/",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"admin",
+										"address",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get one",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{HOST}}/admin/address/:addressId",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"admin",
+										"address",
+										":addressId"
+									],
+									"variable": [
+										{
+											"key": "addressId",
+											"value": "30"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "dddd355",
+											"type": "text"
+										},
+										{
+											"key": "stat",
+											"value": "dddd55555",
+											"type": "text"
+										},
+										{
+											"key": "city",
+											"value": "dddd",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "neighborhood,",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "street",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "alley",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "house_number",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "others",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{HOST}}/admin/address/:addressId",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"admin",
+										"address",
+										":addressId"
+									],
+									"variable": [
+										{
+											"key": "addressId",
+											"value": "30"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "{{TOKEN}}",
+								"type": "string"
+							}
+						]
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "company Info",
+					"item": [
+						{
+							"name": "get my companies",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{HOST}}/admin/company/my",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"admin",
+										"company",
+										"my"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "set my companies",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "retert",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "economic_code",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "national_code",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "registeration_id",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "telephone_number",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "field_of_activity",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{HOST}}/admin/company/my",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"admin",
+										"company",
+										"my"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get all",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "filter",
+											"value": "{\"name\":\"a\"}",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "sort_by",
+											"value": "id",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "sort_type",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "per_page",
+											"value": "10",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{HOST}}/admin/company/",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"admin",
+										"company",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get one",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{HOST}}/admin/company/:companyId",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"admin",
+										"company",
+										":companyId"
+									],
+									"variable": [
+										{
+											"key": "companyId",
+											"value": "7"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "dddd",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "economic_code",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "national_code",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "registeration_id",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "telephone_number",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "field_of_activity",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{HOST}}/admin/company/:companyId",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"admin",
+										"company",
+										":companyId"
+									],
+									"variable": [
+										{
+											"key": "companyId",
+											"value": "7"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "{{TOKEN}}",
+								"type": "string"
+							}
+						]
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "social Media",
+					"item": [
+						{
+							"name": "get my social Media",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{HOST}}/admin/social-media/my",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"admin",
+										"social-media",
+										"my"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "set my social Media",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "facebook",
+											"value": "4445",
+											"type": "text"
+										},
+										{
+											"key": "twitter",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "linkedIn",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "youtube",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "aparat",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "instagram",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "telegram",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "others",
+											"value": "{}",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{HOST}}/admin/social-Media/my",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"admin",
+										"social-Media",
+										"my"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get all",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "filter",
+											"value": "{\"name\":\"a\"}",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "sort_by",
+											"value": "id",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "sort_type",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "per_page",
+											"value": "10",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{HOST}}/admin/social-Media/",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"admin",
+										"social-Media",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get one",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{HOST}}/admin/social-Media/:socialMediaId",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"admin",
+										"social-Media",
+										":socialMediaId"
+									],
+									"variable": [
+										{
+											"key": "socialMediaId",
+											"value": "9"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "facebook",
+											"value": "44456",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "twitter",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "linkedIn",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "youtube",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "aparat",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "instagram",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "telegram",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "others",
+											"value": "{}",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{HOST}}/admin/social-Media/:socialMediaId",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"admin",
+										"social-Media",
+										":socialMediaId"
+									],
+									"variable": [
+										{
+											"key": "socialMediaId",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "{{TOKEN}}",
+								"type": "string"
+							}
+						]
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "other info",
+					"item": [
+						{
+							"name": "get my info",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{HOST}}/admin/info/my",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"admin",
+										"info",
+										"my"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "set my info",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "phone_number",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "configurations",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "name",
+											"value": "gggg",
+											"type": "text"
+										},
+										{
+											"key": "family_name",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "birthday",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "national_id",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "gender",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "job",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "state",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "city",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "others",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{HOST}}/admin/info/my",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"admin",
+										"info",
+										"my"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get all",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "filter",
+											"value": "{\"name\":\"a\"}",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "sort_by",
+											"value": "id",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "sort_type",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "per_page",
+											"value": "10",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{HOST}}/admin/info/",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"admin",
+										"info",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get one",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{HOST}}/admin/info/:infoId",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"admin",
+										"info",
+										":infoId"
+									],
+									"variable": [
+										{
+											"key": "infoId",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "",
+											"description": "required",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "phone_number",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "configurations",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "name",
+											"value": "gggg",
+											"type": "text"
+										},
+										{
+											"key": "family_name",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "birthday",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "national_id",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "gender",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "job",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "state",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "city",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "others",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{HOST}}/admin/info/:infoId",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"admin",
+										"info",
+										":infoId"
+									],
+									"variable": [
+										{
+											"key": "infoId",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "{{TOKEN}}",
+								"type": "string"
+							}
+						]
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "users managment",
+					"item": [
+						{
+							"name": "get all",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "filter",
+											"value": "{\"id\":\"a\"}",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "sort_by",
+											"value": "id",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "sort_type",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "per_page",
+											"value": "10",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{HOST}}/admin/users/",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"admin",
+										"users",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get one",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{HOST}}/admin/users/:userId",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"admin",
+										"users",
+										":userId"
+									],
+									"variable": [
+										{
+											"key": "userId",
+											"value": "9e8326cb-dea5-4e8b-b28f-8525f51ad410"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get user By WalletId",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{HOST}}/super-admin/users/user-by-wallet/:walletId",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"super-admin",
+										"users",
+										"user-by-wallet",
+										":walletId"
+									],
+									"variable": [
+										{
+											"key": "walletId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "{{TOKEN}}",
+								"type": "string"
+							}
+						]
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "session",
+					"item": [
+						{
+							"name": "get sessions",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "id",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "user_id",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "session_id",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "block_status",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{HOST}}/admin/session",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"admin",
+										"session"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "block session",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"block_status\":false\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{HOST}}/admin/session/:sessionId",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"admin",
+										"session",
+										":sessionId"
+									],
+									"variable": [
+										{
+											"key": "sessionId",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "del session",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{HOST}}/admin/session/:sessionId",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"admin",
+										"session",
+										":sessionId"
+									],
+									"variable": [
+										{
+											"key": "sessionId",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "{{TOKEN}}",
+								"type": "string"
+							}
+						]
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "session",
+					"item": [
+						{
+							"name": "get sessions",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "filter",
+											"value": "{\"name\":\"a\"}",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "sort_by",
+											"value": "id",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "sort_type",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "per_page",
+											"value": "10",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{HOST}}/super-admin/session",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"super-admin",
+										"session"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "block session",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"block_status\":false\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{HOST}}/super-admin/session/:sessionId",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"super-admin",
+										"session",
+										":sessionId"
+									],
+									"variable": [
+										{
+											"key": "sessionId",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "del session",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{HOST}}/super-admin/session/:sessionId",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"super-admin",
+										"session",
+										":sessionId"
+									],
+									"variable": [
+										{
+											"key": "sessionId",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "{{TOKEN}}",
+								"type": "string"
+							}
+						]
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "login by user pass",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "learn",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "admin_learnning",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{HOST}}/admin/login",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"admin",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login by phone",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "phone_number",
+									"value": "09339858861",
+									"type": "text"
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{HOST}}/admin/login/by-phone",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"admin",
+								"login",
+								"by-phone"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verify login by phone",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "phone_number",
+									"value": "09339858861",
+									"type": "text"
+								},
+								{
+									"key": "code",
+									"value": "503700",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{HOST}}/admin/login/by-phone/verify",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"admin",
+								"login",
+								"by-phone",
+								"verify"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update my credentials",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "user0000",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "root0000",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "user000@example.com0",
+									"type": "text"
+								},
+								{
+									"key": "phone_number",
+									"value": "09339858861",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{HOST}}/admin/me/update",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"admin",
+								"me",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "my information",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/admin/me",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"admin",
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/admin/logout",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"admin",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{TOKEN}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var Header = require('postman-collection').Header",
+							"pm.request.headers.add({key: 'auth_basic', value: 'Basic c2hpZDoxMjM0NTY3OA==' })//{shid:'12345678'}"
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "address",
+					"item": [
+						{
+							"name": "get my addresses",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{HOST}}/address",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"address"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "set my addresses",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "dr",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "stat",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "city",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "neighborhood,",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "street",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "alley",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "house_number",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "others",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{HOST}}/address",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"address"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "dddd355",
+											"type": "text"
+										},
+										{
+											"key": "stat",
+											"value": "dddd55555",
+											"type": "text"
+										},
+										{
+											"key": "city",
+											"value": "dddd",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "neighborhood,",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "street",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "alley",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "house_number",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "others",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{HOST}}/address/:addressId",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"address",
+										":addressId"
+									],
+									"variable": [
+										{
+											"key": "addressId",
+											"value": "38"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "{{TOKEN}}",
+								"type": "string"
+							}
+						]
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "company Info",
+					"item": [
+						{
+							"name": "get my companies",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{HOST}}/company",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"company"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "set my companies",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "dxdfdf",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "economic_code",
+											"value": "cxvxcv",
+											"type": "text"
+										},
+										{
+											"key": "national_code",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "registeration_id",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "telephone_number",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "field_of_activity",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{HOST}}/company",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"company"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "dddd",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "economic_code",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "national_code",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "registeration_id",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "telephone_number",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "field_of_activity",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{HOST}}/company/:companyId",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"company",
+										":companyId"
+									],
+									"variable": [
+										{
+											"key": "companyId",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "{{TOKEN}}",
+								"type": "string"
+							}
+						]
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "social Media",
+					"item": [
+						{
+							"name": "get my social Media",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{HOST}}/social-media",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"social-media"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "set my social Media",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "facebook",
+											"value": "44455",
+											"type": "text"
+										},
+										{
+											"key": "twitter",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "linkedIn",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "youtube",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "aparat",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "instagram",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "telegram",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "others",
+											"value": "{}",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{HOST}}/social-Media",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"social-Media"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "{{TOKEN}}",
+								"type": "string"
+							}
+						]
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "other info",
+					"item": [
+						{
+							"name": "get my info",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{HOST}}/info",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"info"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "set my info",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "phone_number",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "configurations",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "name",
+											"value": "gggg",
+											"type": "text"
+										},
+										{
+											"key": "family_name",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "birthday",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "national_id",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "gender",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "job",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "state",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "city",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "others",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{HOST}}/info",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"info"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "{{TOKEN}}",
+								"type": "string"
+							}
+						]
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "session",
+					"item": [
+						{
+							"name": "get sessions",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{HOST}}/session",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"session"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "del session",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{HOST}}/session/:sessionId",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"session",
+										":sessionId"
+									],
+									"variable": [
+										{
+											"key": "sessionId",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "{{TOKEN}}",
+								"type": "string"
+							}
+						]
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "security",
+					"item": [
+						{
+							"name": "get security questions",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{HOST}}/security-questions",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"security-questions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "set security answer",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "security_question_id",
+											"value": "1033a0f2-cde5-4430-9c72-4af7f6c810a3",
+											"type": "text"
+										},
+										{
+											"key": "answer",
+											"value": "yeeeeegggg",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{HOST}}/security-answer",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"security-answer"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "recovery by last password (recovery step 1)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "taheri",
+											"description": "taheri",
+											"type": "text"
+										},
+										{
+											"key": "last_password",
+											"value": "taheri213",
+											"description": "taheri213",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{HOST}}/recovery/by-last-password",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"recovery",
+										"by-last-password"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "recovery  set new password (recovery step 2)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "user112",
+											"type": "text"
+										},
+										{
+											"key": "new_password",
+											"value": "root10",
+											"type": "text"
+										},
+										{
+											"key": "security_question_id",
+											"value": "1033a0f2-cde5-4430-9c72-4af7f6c810a3",
+											"type": "text"
+										},
+										{
+											"key": "answer",
+											"value": "yeeeeegggg",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{HOST}}/recovery/new-password",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"recovery",
+										"new-password"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "{{TOKEN}}",
+								"type": "string"
+							}
+						]
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "user130",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "root220",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "user1270@example.com",
+									"type": "text"
+								},
+								{
+									"key": "phone_number",
+									"value": "09339858890",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{HOST}}/register/:roleId/:serviceId",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"register",
+								":roleId",
+								":serviceId"
+							],
+							"variable": [
+								{
+									"key": "roleId",
+									"value": "f1caeb99-2652-4210-8b98-a385f8a474b8"
+								},
+								{
+									"key": "serviceId",
+									"value": "a85ff7eb-6700-4428-8c9b-adb9f1a936c3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update my credentials",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "user112",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "root20",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "user112@example.com",
+									"type": "text"
+								},
+								{
+									"key": "phone_number",
+									"value": "09339858861",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{HOST}}/me/update",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"me",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login by user pass",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "user130",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "root220",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{HOST}}/login/:roleId/:serviceId",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"login",
+								":roleId",
+								":serviceId"
+							],
+							"variable": [
+								{
+									"key": "roleId",
+									"value": "f77f80bb-5751-4d1f-a116-3a660b244393",
+									"type": "string"
+								},
+								{
+									"key": "serviceId",
+									"value": "4c679ac2-ade4-4b95-8f81-8089a7bc232c",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login by phone",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "phone_number",
+									"value": "09339858861",
+									"type": "text"
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{HOST}}/login/by-phone/:roleId/:serviceId",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"login",
+								"by-phone",
+								":roleId",
+								":serviceId"
+							],
+							"variable": [
+								{
+									"key": "roleId",
+									"value": "f0e44848-4072-49b5-a4e3-f06f2b95ab06"
+								},
+								{
+									"key": "serviceId",
+									"value": "e0e44848-4072-49b5-a5e3-f06f2b95ab06"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verify login by phone",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "phone_number",
+									"value": "09339858861",
+									"type": "text"
+								},
+								{
+									"key": "code",
+									"value": "340637",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{HOST}}/login/by-phone/verify/:roleId/:serviceId",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"login",
+								"by-phone",
+								"verify",
+								":roleId",
+								":serviceId"
+							],
+							"variable": [
+								{
+									"key": "roleId",
+									"value": "f0e44848-4072-49b5-a4e3-f06f2b95ab06"
+								},
+								{
+									"key": "serviceId",
+									"value": "e0e44848-4072-49b5-a5e3-f06f2b95ab06"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "my information",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/me",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete user account",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "password",
+									"value": "root22",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{HOST}}/delete-my-account",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"delete-my-account"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/logout",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{TOKEN}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var Header = require('postman-collection').Header",
+							"pm.request.headers.add({key: 'auth_basic', value: 'Basic c2hpZDoxMjM0NTY3OA==' })//{shid:'12345678'}"
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "refresh the access token by refreshToken",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "refresh_token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiN2NlY2RhZGEtMGM5NC00MjI0LWFjY2MtYTQ0MzgyMDY2ZDZkIiwidXNlcl90eXBlIjoic3VwZXJfYWRtaW4iLCJpYXQiOjE2MzA5MTIyMDMsImV4cCI6MTYzMDkxOTQwM30.7INr2-EQP1fSY1HP1TDlt0XbD0yecW0BOSbMhSENW90",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "refresh_token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiZGE1YmQ3YzUtN2YyNS00MDk5LTg1ZjEtZDEwMjdjZTc0OTU5IiwidXNlcl90eXBlIjoiYWRtaW4iLCJpYXQiOjE2MzA5MTI1MTIsImV4cCI6MTYzMDkxOTcxMn0.y69CfLcjhiGLSMIKBe7840kCG9L9wAs2CYE06O7AQ0s",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "refresh_token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiZGYxZGUxMTUtZjJlNC00NTBlLTkwNTYtYjEzNjU3OTc4ZjJhIiwidXNlcl90eXBlIjoidXNlciIsImlhdCI6MTYzMDkxMjg1NiwiZXhwIjoxNjMwOTIwMDU2fQ.NqLRHsXSOX7pP3MyGXfsHa5JSSPM4JfjnMAuPzq_FR4",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{HOST}}/update-token",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"update-token"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"var Header = require('postman-collection').Header",
+					"pm.request.headers.add({key: 'auth_basic', value: 'Basic c2hpZDoxMjM0NTY3OA==' })//{shid:'12345678'}"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "HOST",
+			"value": "https://authentication.iran.liara.run:443"
+		},
+		{
+			"key": "TOKEN",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImU0NTk4ZDM1LTNjN2ItNDYzMC1iZjc2LTcyYTU3Y2U5ZGFlYiIsInJvbGUiOiJzdXBlcl9hZG1pbiIsImlhdCI6MTYzMTc2OTcxNiwiZXhwIjoxNjMxNzc2OTE2fQ.66K3B6hywv7XiAeq8IDHd_fGj2b4micq_NSuNAQI2Us"
+		},
+		{
+			"key": "TOKEN",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImRhZDUzMTY5LTJkYTAtNDgwZi04MWZmLTY1YTRjNjkwYThlMCIsInJvbGUiOiJhZG1pbiIsInNlcnZpY2UiOiIyZTEyMGM2Yy1mYTFkLTQyZTQtYWI0MS02NzNiZjNmMzJmMTMiLCJwYWNrZXRfaWQiOiJhYjM1NjQ3Yi1mYjI3LTQ1NjMtYTFiOS1jODAxZGVmNTAwNDYiLCJ1c2VybmFtZSI6ImxlYXJuIiwid2FsbGV0X2lkIjoiMmVhOTBkNjUtOGVlOC00ZmVmLWFhNDUtZjViOTZmMzI4ZGUyIiwiaWF0IjoxNjMxNTI5MjI2LCJleHAiOjE2MzE1MzY0MjZ9.UJGqmqDBHJNnmmF2AgboiZMu4vel5a-1lLMuKDklphs"
+		},
+		{
+			"key": "TOKEN",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjhmMjllZjhmLThlMjgtNGJmZi1hNGIzLTA2NTRkOGFkYWY4YiIsInJvbGUiOiJ1c2VyIiwic2VydmljZSI6ImJiYjRkN2Y4LWUzOWEtNGJlZS1iNjJlLTJhNjYxNDZmMjBmZSIsInJvbGVfaWQiOiJmNTkxMTg4Mi04Yzg3LTQ5Y2UtOGViMi1lM2U0N2I4ODQyZDciLCJ1c2VybmFtZSI6InRhaGVyaSIsIndhbGxldF9pZCI6IjMxYTZlOGViLWRmMjctNDJhOC04NDdkLTEwN2RjZTk3MmY4OSIsInBhY2tldF9pZCI6IjUzOGQ0NDc1LTExMWMtNDczOS05NzFmLWI5YzQ0NjhkYjliZCIsImlhdCI6MTYzMTA5OTg2NSwiZXhwIjoxNjMxMTA3MDY1fQ.Obwn2jqxBk-ChqzId7kMBb5jGdZTcvzwHBcfj_qKwBk"
+		},
+		{
+			"key": "HOST",
+			"value": "http://127.0.0.1:3001"
+		}
+	]
+}
