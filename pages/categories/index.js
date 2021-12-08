@@ -51,10 +51,7 @@ function Magazines(props) {
     <Layout className="p-2">
       <Slider />
 
-      <div
-        class="grid grid-cols-12 gap-0"
-        style={{ background: "red", height: "300px" }}
-      >
+      <div class="grid grid-cols-12 gap-0" style={{ height: "300px" }}>
         <Item
           imgSrc="https://picsum.photos/id/870/400/300?grayscale&blur=2"
           text="simple test"
@@ -72,11 +69,8 @@ function Magazines(props) {
         />
       </div>
 
-      <div
-        class="grid grid-cols-12 gap-0"
-        style={{ background: "red", height: "300px" }}
-      >
-        <div className="col-span-6" style={{ background: "yellow" }}>
+      <div class="grid grid-cols-12 gap-0" style={{ height: "300px" }}>
+        <div className="col-span-6">
           <div
             style={{
               display: "flex",
@@ -84,7 +78,7 @@ function Magazines(props) {
               height: "300px",
             }}
           >
-            <div style={{ background: "red", height: "50%" }}>
+            <div style={{ height: "50%" }}>
               <Link href="/" className="h-full w-full">
                 <img
                   src={"https://picsum.photos/200/300/?blur"}
@@ -93,7 +87,7 @@ function Magazines(props) {
                 <ItemMessage text={"simple text"} size="sm" />
               </Link>
             </div>
-            <div style={{ background: "red", height: "50%" }}>
+            <div style={{ height: "50%" }}>
               <Link href="/" className="h-full w-full">
                 <img
                   src={"https://picsum.photos/600/300"}
@@ -109,7 +103,7 @@ function Magazines(props) {
           text="simple test"
           col={3}
         />
-        <div className="col-span-3" style={{ background: "yellow" }}>
+        <div className="col-span-3">
           <div
             style={{
               display: "flex",
@@ -117,7 +111,7 @@ function Magazines(props) {
               height: "300px",
             }}
           >
-            <div style={{ background: "red", height: "50%" }}>
+            <div style={{ height: "50%" }}>
               <Link href="/" className="h-full w-full">
                 <img
                   src={"https://picsum.photos/600/300"}
@@ -126,7 +120,7 @@ function Magazines(props) {
                 <ItemMessage text={"simple text"} size="sm" />
               </Link>
             </div>
-            <div style={{ background: "red", height: "50%" }}>
+            <div style={{ height: "50%" }}>
               <Link href="/" className="h-full w-full">
                 <img
                   src={"https://picsum.photos/200/300?grayscale"}
@@ -139,10 +133,7 @@ function Magazines(props) {
         </div>
       </div>
 
-      <div
-        class="grid grid-cols-12 gap-0"
-        style={{ background: "red", height: "300px" }}
-      >
+      <div class="grid grid-cols-12 gap-0" style={{ height: "300px" }}>
         <Item
           imgSrc="https://picsum.photos/200/300/?blur"
           text="simple test"
